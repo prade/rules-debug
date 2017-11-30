@@ -1019,6 +1019,7 @@ class Host(object):
         self.get_ruleset(ruleset_name).renew_action_lease(sid)
 
     def register_rulesets(self, parent_name, ruleset_definitions):
+        print(ruleset_definitions)
         rulesets = Ruleset.create_rulesets(parent_name, self, ruleset_definitions, self._state_cache_size)
         for ruleset_name, ruleset in rulesets.items():
             if ruleset_name in self._ruleset_directory:

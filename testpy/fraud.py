@@ -3,8 +3,7 @@ import time
 
 
 with ruleset('fraud_detection'):
-    @when_all(span(10),
-             (m.t == 'debit_cleared') | (m.t == 'credit_cleared'))
+    @when_all((m.t == 'debit_cleared') | (m.t == 'credit_cleared'))
     def handle_balance(c):
         debit_total = 0
         credit_total = 0

@@ -1,0 +1,3 @@
+durable-rules==0.33.117
+redis==2.10.6
+Werkzeug==0.12.2

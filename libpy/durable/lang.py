@@ -660,6 +660,7 @@ def create_host(databases = None, state_cache_size = 1024):
         ruleset_name, ruleset_definition = rset.define()
         ruleset_definitions[ruleset_name] = ruleset_definition
         
+    print(ruleset_definitions)
     main_host = engine.Host(ruleset_definitions, databases, state_cache_size)
     for start in _start_functions:
         start(main_host)
